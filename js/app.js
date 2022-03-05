@@ -1,4 +1,5 @@
 const apiURL = "https://artists-men-restful-api.herokuapp.com/api/artists";
+const apiURLSingleArtist = "https://artists-men-restful-api.herokuapp.com";
 
 const getArtists = async () => {
   
@@ -12,7 +13,7 @@ const getArtists = async () => {
       card += artists[i].photo;
       card += '"alt="Image of ';
       card+= artists[i].name+'"Card image cap"><div class="card-body"><h3 class="card-title">';
-      card += artists[i].name;
+      card += "<a class='artist_uri' href='"+apiURLSingleArtist+artists[i].uri+"' target='_blank' >"+artists[i].name+"</a>";
       card += '</h3><span class="card-text">';
       card += '<h5><i>'+artists[i].genre+'</i> · '+commarize(artists[i].listeners)+' Listeners</h5>';
       card +=  '<p class="artist-info">'+artists[i].info+'</p>';

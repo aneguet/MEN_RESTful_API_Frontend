@@ -34,6 +34,12 @@ body{
     font-size: 15px;
     margin-top: 2em;
 }
+.card-title a, .card-title a:link, .card-title a:visited{
+    color: #fc3583;
+}
+.card-title a:hover, .card-title a:focus, .card-title a:active{
+    color: #ee335b;
+}
 /* Bottom api link */
 #api-link{
     color: #ff99f6;
