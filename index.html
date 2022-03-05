@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Artists · Frontend</title>
+</head>
+
+<body>
+
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="container-fluid mb-4" style="text-align: center;">
+      <!-- Header -->
+      <div class="row" id="header">
+        <img id="header-bg-image" src="assets/artists_bg.png" class="mx-auto" title="Artists frontend that shows API data" />
+      </div>
+      <br><br>
+      <!-- Artists Cards (Data) -->
+      <div class="cards d-flex justify-content-center">
+        <div id="content" class="d-flex">Loading Artists...</div>
+      </div>
+      <br><br>
+      <div id="api-link" class="d-flex justify-content-center">
+        <h5>Data extracted from <a href="https://artists-men-restful-api.herokuapp.com/api/docs/">Artists API</a></h5> 
+      </div>
+      <!-- <img src="assets/chucknorris_logo.png" title="Chuck Norris API Random Jokes Generator" /> -->
+    </div>
+  </div>
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

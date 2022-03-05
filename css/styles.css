@@ -1,0 +1,43 @@
+
+
+body{
+    background-color: #212529;
+}
+/* Headers */
+#header{
+    background-color: #ff99f6;
+}
+#header-bg-image{
+    width: 50%;
+}
+/* Cards */
+.card {
+    display:inline-block;
+    width: 400px;
+    margin: 2em;
+    border: 0;
+    background-color: #f8f9fa!important;
+}
+.card-img-top{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.card-text{
+    font-size: 19px;
+}
+.card-body{
+    margin: 1em;
+}
+.artist-info{
+    text-align: justify;
+    font-size: 15px;
+    margin-top: 2em;
+}
+/* Bottom api link */
+#api-link{
+    color: #ff99f6;
+}
+#api-link a, #api-link a:link, #api-link a:visited{
+    color: #ff99f6;
+}
