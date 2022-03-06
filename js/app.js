@@ -27,7 +27,7 @@ const getArtists = async () => {
       card+= artists[i].name+'"Card image cap"><div class="card-body mb-0 d-flex flex-column"><h5 class="card-title">';
       card += "<a class='artist_uri' href='"+apiURLSingleArtist+artists[i].uri+"' target='_blank' >"+artists[i].name+"</a>";
       card += '</h5><span class="card-text">';
-      card += '<h6><i>'+artists[i].genre+'</i> · '+commarize(artists[i].listeners)+' Listeners</h6>';
+      card += '<h6><i>'+artists[i].genre+'</i> · '+artists[i].listeners+' Listeners</h6>';
       card +=  '<p class="artist-info">'+artists[i].info+'</p>';
       card += '<h6>Albums</h6><p class="artist-albums">'+addSpace(artists[i].albums)+'</p>';
       card += '<h6>Top tracks</h6><p class="top-tracks">'+addSpace(artists[i].top_tracks)+'</p>';
@@ -43,23 +43,6 @@ const getArtists = async () => {
 
 //Retrieves artists when page is loaded
 getArtists();
-
-
-// Listeners number formatting 
-function commarize(val)
-{
-	if (val >= 1e6)
-	{
-		var units = ["M","B","T"];
-		var unit = Math.floor((val / 1000).toFixed(0).toString().length);
-		var num = (val / ('1e'+(unit+2))).toFixed(3);
-		var unitname = units[Math.floor(unit / 3) - 1];
-		return num + '' + unitname;
-	}
-	var parts = val.toString().split(".")
-	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-	return parts.join(".")
-}
 
 function addSpace(val){
   let valSentence = '';
