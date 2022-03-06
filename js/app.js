@@ -7,12 +7,24 @@ const getArtists = async () => {
   const artists = await res.json();
 
   var content = document.querySelector("#content");
-
+  var card = '<div class="row">';
+  var count = 0;
+  var margin_class = 'class1';
   for (var i=0; i<artists.length; i += 1) {
-      var card = '<div class="card"><img class="card-img-top" src="';
+      if(count==3) count = 0;
+      if(count==0){
+        margin_class = 'class0';
+      }
+      else if(count==1){
+        margin_class = 'class1';
+      }
+      else if(count==2){
+        margin_class = 'class2';
+      }
+      card += '<div class="col-4 d-flex align-items-stretch"><div class="card '+margin_class+'"><img class="card-img-top" src="';
       card += artists[i].photo;
       card += '"alt="Image of ';
-      card+= artists[i].name+'"Card image cap"><div class="card-body"><h5 class="card-title">';
+      card+= artists[i].name+'"Card image cap"><div class="card-body mb-0 d-flex flex-column"><h5 class="card-title">';
       card += "<a class='artist_uri' href='"+apiURLSingleArtist+artists[i].uri+"' target='_blank' >"+artists[i].name+"</a>";
       card += '</h5><span class="card-text">';
       card += '<h6><i>'+artists[i].genre+'</i> · '+commarize(artists[i].listeners)+' Listeners</h6>';
@@ -20,10 +32,13 @@ const getArtists = async () => {
       card += '<h6>Albums</h6><p class="artist-albums">'+addSpace(artists[i].albums)+'</p>';
       card += '<h6>Top tracks</h6><p class="top-tracks">'+addSpace(artists[i].top_tracks)+'</p>';
       card += '<h6>Similar Artists</h6><p class="top-tracks">'+addSpace(artists[i].similar_to)+'</p>';
-      card += '</span></div></div>'; //card body end
-      content.innerHTML+=card;
+      card += '</span></div></div></div>'; //card body end
+      count ++;
+      
+      
   }
-
+  card += '</div>';
+  content.innerHTML+=card;
 };
 
 //Retrieves artists when page is loaded

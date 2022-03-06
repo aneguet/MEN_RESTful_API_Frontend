@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-color: #212529;
@@ -13,10 +15,12 @@ body{
 /* Cards */
 .card {
     display:inline-block;
-    width: 280px;
-    margin: 2em;
+    /* width: 280px; */
+    /* margin: 2em; */
     border: 0;
     background-color: #f8f9fa!important;
+    /* margin: 2.3em 2em 2.3em 2em; */
+    /* padding: 0em; */
 }
 .card-img-top{
     width: 100%;
@@ -39,6 +43,22 @@ body{
 }
 .card-title a:hover, .card-title a:focus, .card-title a:active{
     color: #ee335b;
+}
+
+.card-img-top {
+    height: 21vw;
+}
+.align-items-stretch {
+    margin-bottom: 3em !important;
+}
+.class0{
+    margin-left: 7em;
+}
+.class1{
+    margin: 0em 3.5em 0em 3.5em;
+}
+.class2{
+    margin-right: 7em;
 }
 /* Bottom api link */
 #api-link{
