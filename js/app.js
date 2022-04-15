@@ -4,7 +4,7 @@
 const apiURL =
   'https://artists-menrestfulapi-testing.herokuapp.com/api/artists';
 const apiURLSingleArtist =
-  'https://artists-menrestfulapi-testing.herokuapp.com/';
+  'https://artists-menrestfulapi-testing.herokuapp.com';
 
 const getArtists = async () => {
   const res = await fetch(apiURL);
