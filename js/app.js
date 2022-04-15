@@ -2,7 +2,7 @@
 // const apiURLSingleArtist = "https://artists-men-restful-api.herokuapp.com";
 
 const apiURL =
-  'https://artists-menrestfulapi-testing.herokuapp.com//api/artists';
+  'https://artists-menrestfulapi-testing.herokuapp.com/api/artists';
 const apiURLSingleArtist =
   'https://artists-menrestfulapi-testing.herokuapp.com/';
 
